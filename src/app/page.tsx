@@ -12,14 +12,21 @@ import { CurrentlyLearningSection } from "@/components/sections/CurrentlyLearnin
 import { JourneySection } from "@/components/sections/JourneySection";
 import { IdentitySection } from "@/components/sections/IdentitySection";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { Navigation } from "@/components/sections/Navigation";
+import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
   return (
     <main className="relative w-full min-h-screen">
+      {/* Navigation */}
+      <Navigation />
+
       {/* Continuous Physical Warm Paper Base */}
       <PaperTexture variant="warm">
         {/* 01 — COVER / HERO */}
-        <Hero />
+        <section id="home" data-section="home">
+          <Hero />
+        </section>
 
         {/* 02 — ABOUT / HELLO */}
         <AboutSection />
@@ -48,6 +55,9 @@ export default function Home() {
         {/* 10 — CONTACT / LET'S CONNECT */}
         <ContactSection />
       </PaperTexture>
+
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }
